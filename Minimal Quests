@@ -1,0 +1,18 @@
+/* Minimal Quests */
+[class^=questsListContainer_] [class^=questsCard_]:has([class^=outerContainer_][aria-hidden=false]) {
+  max-height: 115px!important;
+  transition: max-height 1s, box-shadow 1s;
+
+  &:hover {
+    max-height: 323px!important;
+    box-shadow: 0px 0px 0px;
+  }
+}
+/* Blue highlight on Quest card when Quest is in progress */
+[class^=questsListContainer_] [class^=questsCard_]:has([class*=gridProgressBar_]):not(:has([aria-valuenow="100"])) {
+  box-shadow: 0px 0px 15px oklab(0.576971 0.014185 -0.208914);
+}
+/* Green highlight on Quest card when Quest has completed */
+[class^=questsListContainer_] [class^=questsCard_]:has([class*=gridProgressBar_]):has([aria-valuenow="100"]) {
+  box-shadow: 0px 0px 15px oklab(0.731929 -0.156544 0.0807654);
+}
