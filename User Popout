@@ -1,0 +1,3 @@
+[class^=userPopoutInner_] [class^=blockquoteContainer_] {
+  max-height: 90px;
+}
